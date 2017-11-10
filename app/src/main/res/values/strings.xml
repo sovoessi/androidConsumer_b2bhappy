@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UrpanApp</string>
+    <string name="search">Search</string>
+    <string name="fr_search_box">Veuillez saisir le nom de la societe</string>
+    <string name="error_message">Failed to get results, please try again</string>
+
+</resources>
