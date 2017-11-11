@@ -33,7 +33,7 @@ public class NetworkUtils {
     final static String BASE_URL =
             "https://jsonplaceholder.typicode.com/comments";
 
-    final static String PARAM_QUERY = "potsId";
+   // final static String PARAM_QUERY = "potsId";
 
     /**
      * Builds the URL used to query jsonplaceholder.
@@ -43,7 +43,7 @@ public class NetworkUtils {
      */
     public static URL buildUrl(String searchQuery) {
         Uri builtUri = Uri.parse(BASE_URL).buildUpon()
-                .appendQueryParameter(PARAM_QUERY, searchQuery)
+               // .appendQueryParameter(PARAM_QUERY, searchQuery)
                 .build();
 
         URL url = null;

@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+           <TextView
                 android:id="@+id/search_results_json"
                 android:text="Enter a search query and the results will show up here"
                 android:textSize="18sp"
@@ -58,5 +58,6 @@
             />
 
     </FrameLayout>
+
 
 </LinearLayout>
