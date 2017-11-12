@@ -34,7 +34,10 @@ public class CommonIntentsStartActivity extends AppCompatActivity {
      * @param v Button that was clicked.
      */
     public void onClickOpenAddressButton(View v) {
-        Toast.makeText(this, "TODO: Open a map when this button is clicked", Toast.LENGTH_SHORT).show();
+
+        showMap("1660 Amphitheatre Parkway, CA");
+        
+        //Toast.makeText(this, "TODO: Open a map when this button is clicked", Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -91,5 +94,23 @@ public class CommonIntentsStartActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
+    }
+
+    private  void showMap(String destination){
+        String addressString = destination;
+
+        Uri.Builder builder = new Uri.Builder();
+
+        builder.scheme("geo")
+                .path("0,0")
+                .query(addressString);
+        Uri addressUri = builder.build();
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(addressUri);
+
+        if(intent.resolveActivity(getPackageManager()) != null){
+            startActivity(intent);
+        }
     }
 }
