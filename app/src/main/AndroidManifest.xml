@@ -11,17 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".ListCompanyActivity" />
-        <activity android:name=".SampleActivity">
-
-        </activity>
-        <activity android:name=".ChildActivity">
-
-        </activity>
-        <activity android:name=".ParentActivity">
+        <activity android:name=".SampleActivity"></activity>
+        <activity android:name=".ChildActivity"></activity>
+        <activity android:name=".ParentActivity"></activity>
+        <activity android:name=".CommonIntentsStartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
