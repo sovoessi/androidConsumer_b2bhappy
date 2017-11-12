@@ -2,6 +2,7 @@ package com.studios.javio.dahomeykid.urpanapp;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,7 +37,7 @@ public class CommonIntentsStartActivity extends AppCompatActivity {
     public void onClickOpenAddressButton(View v) {
 
         showMap("1660 Amphitheatre Parkway, CA");
-        
+
         //Toast.makeText(this, "TODO: Open a map when this button is clicked", Toast.LENGTH_SHORT).show();
     }
 
@@ -47,7 +48,11 @@ public class CommonIntentsStartActivity extends AppCompatActivity {
      * @param v Button that was clicked.
      */
     public void onClickShareTextButton(View v) {
-        Toast.makeText(this, "TODO: Share text when this is clicked", Toast.LENGTH_LONG).show();
+
+        shareData("text/plain", "Learning How to share", "Hello there");
+
+
+        //Toast.makeText(this, "TODO: Share text when this is clicked", Toast.LENGTH_LONG).show();
     }
 
     /**
@@ -112,5 +117,15 @@ public class CommonIntentsStartActivity extends AppCompatActivity {
         if(intent.resolveActivity(getPackageManager()) != null){
             startActivity(intent);
         }
+    }
+
+    private void shareData(String mimeType, String title, String textToShare) {
+
+        ShareCompat.IntentBuilder.from(this)
+                .setChooserTitle(title)
+                .setType(mimeType)
+                .setText(textToShare)
+                .startChooser();
+
     }
 }
